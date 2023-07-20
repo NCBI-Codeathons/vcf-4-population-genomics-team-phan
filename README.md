@@ -1,7 +1,7 @@
-# Team Project Name
+# VarAi
 
 List of participants and affiliations:
-- Participant, Affiliation (Team Leader)
+- Lon Phan, NCBI (Team Leader)
 - Participant, Affiliation
 
 ## Project Goals
