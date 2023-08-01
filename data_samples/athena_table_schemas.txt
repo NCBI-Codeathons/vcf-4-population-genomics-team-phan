@@ -1,9 +1,9 @@
 CREATE TABLE annotated_variations (
-    run VARCHAR(255),
-    chr VARCHAR(50),
-    pos BIGINT,
-    ref VARCHAR(255),
-    alt VARCHAR(255),
+    run VARCHAR(255), -- SRA accession, run accession
+    chr VARCHAR(50),  -- chromosome
+    pos BIGINT,       -- DNA or RNA base position
+    ref VARCHAR(255), -- reference allele
+    alt VARCHAR(255), -- alternate or variant allele
     dp BIGINT,
     g_ad_2 BIGINT,
     effect VARCHAR(255),
@@ -20,7 +20,7 @@ CREATE TABLE annotated_variations (
 );
 
 CREATE TABLE metadata (
-    acc VARCHAR(255),
+    acc VARCHAR(255),  --SRA accession, run accession
     assay_type VARCHAR(255),
     center_name VARCHAR(255),
     consent VARCHAR(255),
