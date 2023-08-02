@@ -2,7 +2,7 @@
 
 List of participants and affiliations:
 - Lon Phan, NCBI (Team Leader)
-- Participant, Affiliation
+- Eugene Shekhtman, NCBI
 
 ## Project Goals
 This project aims to use the ACTIV Variant Call Format (VCF) as input to train a domain-specific GPT language model that specializes in providing accurate and relevant information about viral genetics. The model will be trained using a curated dataset of variants, sequence information, genes, and other annotations. The goal is to create an intelligent conversational agent that can assist users in understanding and exploring various aspects of virus genetics and enhance the exploration and retrieval of genetic variation data.  This will be an intuitive and user-friendly Variation AI (VarAI) application for researchers and clinicians to query and retrieve genetic variation information using natural language queries instead of traditionally structured searches (ie. SQL and tool-specific search rules and formats).  VarAi, as a domain-specific ChatGPT model that can learn from VCF, can serve as a general framework or tool to generate domain-specific GPT models for any input VCF from any organism.
