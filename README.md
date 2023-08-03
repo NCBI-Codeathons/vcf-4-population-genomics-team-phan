@@ -4,6 +4,7 @@ List of participants and affiliations:
 - Lon Phan, NCBI (Team Leader)
 - Chelsea Alvarado, NIA Center for Alzhemier's and Related Dementias/ Data Tecnica International LLC
 - Eugene Shekhtman, NCBI
+- Zhanni Lu, UMN
 - Participant, Affiliation
 
 ## Project Goals
