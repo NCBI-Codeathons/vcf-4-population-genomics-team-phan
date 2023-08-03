@@ -1,0 +1,5 @@
+boto3
+langchain
+langchain_experimental
+llama-cpp-python
+PyAthena
