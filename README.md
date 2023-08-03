@@ -4,6 +4,7 @@ List of participants and affiliations:
 - Lon Phan, NCBI (Team Leader)
 - Chelsea Alvarado, NIA Center for Alzhemier's and Related Dementias/ Data Tecnica International LLC
 - Eugene Shekhtman, NCBI
+- Hua Zhang, NCBI
 - Participant, Affiliation
 
 ## Project Goals
@@ -33,6 +34,7 @@ A sample notebook for data analysts and bioinformatic scientists to test code sn
 
 
 ### GPT model (Hua, Chey, and Gene)
+Evaluate and demonstrate using langchain with Open Source Llama model(s), so that users do not need to use paid GPT models.  Sample code is in langchain directory.  Instructions on quantizing models is under the doc directory
 
 
 ### VarAI app (Chelsea)
