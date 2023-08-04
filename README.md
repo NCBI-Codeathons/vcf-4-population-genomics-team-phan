@@ -51,9 +51,10 @@ The conversion from natural language (NL) to SQL is simulated.
 
 ### Backend (Ricardo)
 
-A basic Flask app is in the [`api`](./api) directory. It queries an Athena
-backend that has the contents of the VCF files in this Codeathon. Only the first
-1000 results are retrieved, currently.
+The code for a basic Flask app is in the [`api`](./api) directory. It queries an
+Athena backend that has the contents of the VCF files in this Codeathon. The app
+returns results in CSV format. Only the first 1000 results are retrieved,
+currently.
 
 ![API test page](images/api/test_page.png "Test page")
 
