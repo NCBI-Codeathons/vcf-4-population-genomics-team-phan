@@ -28,19 +28,25 @@ Goals The main objectives of this project are as follows:
 **VCF** (Lon)
 **External data - Gene, Pubmed, etc.** (Polycarp or Chey)
 
-### Backend Database (Ricardo)
-
-A basic Flask app is in the `api` directory.
-
 ### Jupyter Notebook (Zhanni, Ricardo)
 
 `Notebooks/test-model.ipynb` is a sample notebook for data analysts and Bioinformatics scientists to test code snippets, visualize data, and immediately see the results.
+
+![nb_results](images/notebooks/nb_results.png "Notebook executing natural language queries")
+
+### Backend (Ricardo)
+
+A basic Flask app is in the `api` directory.
+
+![test page](images/api/test_page.png "Test page")
+
+![results page](images/api/results_page.png "Results page")
 
 ### GDV data tracks (Zhanni)
 
 ### GPT model (Hua, Chey, and Gene)
 
-Evaluate and demonstrate using langchain with Open Source Llama model(s), so that users do not need to use paid GPT models. Sample code is in langchain directory. Instructions on quantizing models is under the doc directory
+Evaluate and demonstrate using `langchain` with Open Source Llama model(s), so that users do not need to use paid GPT models. Sample code is in `langchain` directory. Instructions on quantizing models is under the doc directory
 
 ### VarAI app (Chelsea)
 
