@@ -11,6 +11,14 @@ export AWS_REGION=us-east-1
 
 ## Run a local server
 
+You need to have a virtual environment created to run the app.
+
+```bash
+source "$(git rev-parse --show-toplevel)/api/dev_env.sh"
+```
+
+Once the v.e. is created, you can start the server:
+
 ```bash
 export FLASK_ENV=development
 export FLASK_APP=app.py

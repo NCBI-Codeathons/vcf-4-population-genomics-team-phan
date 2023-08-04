@@ -15,14 +15,16 @@ if [[ "${BASH_SOURCE[0]}" == "${0}" ]]; then
     exit 33
 fi
 
-rm -rf .ve || true
+api_dir=$( cd -- "$( dirname -- "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )
 
-python3 -m venv .ve
+rm -rf "$api_dir/.ve" || true
 
-source .ve/bin/activate
+python3 -m venv "$api_dir/.ve"
+
+source "$api_dir/.ve/bin/activate"
 
 pip install --upgrade pip
-pip install -r ./requirements/base.txt
+pip install -r "$api_dir/src/requirements/base.txt"
 
 set +o pipefail
 set +o errexit
