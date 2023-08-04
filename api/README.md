@@ -28,9 +28,9 @@ flask run --host=0.0.0.0
 popd
 ```
 
-## Use serverless.com tools to deploy service
+## Use `serverless.com` tools to deploy the server
 
-### Set up serverless.com
+### Set up `serverless.com` tools
 
 You can tweak some steps (paths, command line parameters, etc.) to suit your
 needs.
