@@ -11,6 +11,9 @@ import tempfile
 # TODO improve the quality of this code. It was hastily created
 #      It works, but quality is not at the desired level
 
+# NOTE All results are simulated. We have not yet integrated querying the model
+#      from this app.
+
 class VarAIException(Exception):
     def __init__(self, message, error_code=500):
         self.error_code = error_code

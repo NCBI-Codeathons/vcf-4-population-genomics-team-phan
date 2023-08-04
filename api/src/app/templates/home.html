@@ -23,8 +23,8 @@
                   console.log("success");
                   $('body').html(data);
                 },
-                error: function() {
-                  alert("error");
+                error: function(jqxhr) {
+                  alert("error: " + jqxhr.responseText);
                 }});
             });
           });
