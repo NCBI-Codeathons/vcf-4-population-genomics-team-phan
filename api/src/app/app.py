@@ -1,12 +1,12 @@
-from flask import Flask, request
+from flask import Flask, render_template, request
 from .perform_queries import perform_query, VarAIException
 
 app = Flask(__name__)
 
 
-@app.route('/')
-def index():
-    return 'Server Works!'
+@app.route('/', methods=['GET', 'POST'])
+def home():
+    return render_template('home.html')
 
 
 @app.route('/bysql', methods=['POST'])
