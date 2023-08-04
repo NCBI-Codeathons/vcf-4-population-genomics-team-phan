@@ -60,6 +60,8 @@ Evaluate and demonstrate using `langchain` with Open Source Llama model(s), so t
 
 A web application for general users to query the data using NLP.
 
+![streamlit page](images/streamlit/streamlit_demo_vcf.png "Streamlit Demo page")
+
 ## Results
 
 ## Future Work
