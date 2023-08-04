@@ -34,21 +34,24 @@ Goals The main objectives of this project are as follows:
 
 ![nb_results](images/notebooks/nb_results.png "Notebook executing natural language queries")
 
-**Note** All results shown are simulated. Only these two queries are understood:
+**Note** At the moment, only these two queries are understood:
 
 - Retrieve Run and variation columns for variation E484K
 - variant at position 27513
 
+The conversion from natural language (NL) to SQL is simulated.
+
 ### Backend (Ricardo)
 
-A basic Flask app is in the `api` directory.
+A basic Flask app is in the `api` directory. It queries an Athena backend. Only
+the first 1000 results are retrieved.
 
 ![test page](images/api/test_page.png "Test page")
 
 ![results page](images/api/results_page.png "Results page")
 
-**Note** All results shown are simulated. Only the two queries supported by the
-notebook are understood here.
+**Note** Only the two queries supported by the notebook are understood here.
+Converting NL to SQL is simulated.
 
 ### GDV data tracks (Zhanni)
 
