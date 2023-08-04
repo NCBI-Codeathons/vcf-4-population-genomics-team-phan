@@ -8,8 +8,6 @@ provider:
   stage: dev
   # Configure the S3 bucket used by Serverless Framework to deploy code packages to Lambda
   deploymentBucket:
-    # Name of an existing bucket to use (default: created by serverless)
-    # name: teamphan-varai-deployment
     # On deployment, serverless prunes artifacts older than this limit (default: 5)
     maxPreviousDeploymentArtifacts: 50
     # Right now, serverless does not work without making the bucket public
