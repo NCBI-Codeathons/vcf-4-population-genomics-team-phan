@@ -1,0 +1,44 @@
+service: var-ai-api-4
+provider:
+  name: aws
+  runtime: python3.9
+  region: us-east-1
+  stage: dev
+  # Configure the S3 bucket used by Serverless Framework to deploy code packages to Lambda
+  deploymentBucket:
+    # Name of an existing bucket to use (default: created by serverless)
+    # name: com.serverless.${self:provider.region}.deploys
+    name: teamphan-varai-deployment
+    # On deployment, serverless prunes artifacts older than this limit (default: 5)
+    maxPreviousDeploymentArtifacts: 20
+    # Prevents public access via ACLs or bucket policies (default: false)
+    # Note: the deployment bucket is not public by default. These are additional ACLs.
+    blockPublicAccess: false
+    # Skip the creation of a default bucket policy when the deployment bucket is created (default: false)
+    skipPolicySetup: true
+    # Tags that will be added to each of the deployment resources
+    tags:
+      owner: lp-teamphan
+
+plugins:
+  - serverless-wsgi
+  - serverless-python-requirements
+  - serverless-deployment-bucket
+
+functions:
+  api:
+    handler: wsgi_handler.handler
+    events:
+      - http: ANY /
+      - http: ANY {proxy+}
+
+custom:
+  wsgi:
+    app: app.app
+  pythonRequirements:
+    # non-linux
+    dockerizePip: false
+
+deploymentBucket:
+  name: teamphanvaraideployment
+  serverSideEncryption: SSE-S3
