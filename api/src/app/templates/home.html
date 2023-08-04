@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>VarAI API test page</title>
+    <script src="https://code.jquery.com/jquery-3.5.0.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $("#bynl").click(function(event) {
+              event.preventDefault();
+
+              var values = new String();
+
+              $.each($('#query').serializeArray(), function(i, field) {
+                values += field.value;
+              });
+
+              $.ajax({
+                type: "POST",
+                url: "/bynl",
+                data: values,
+                success: function(data, textStatus, jqXhr) {
+                  console.log("success");
+                  $('body').html(data);
+                },
+                error: function() {
+                  alert("error");
+                }});
+            });
+          });
+    </script>
+  </head>
+  <body>
+    <h1>VarAI API test page</h1>
+    <p>This demo page needs HTML5 to work</p>
+    <p>Enter query in natural language or a SQL statement</p>
+    <p>
+    <form id=frmQry>
+      <textarea name="query" cols="40" rows="10" id="query" name="query"></textarea><br/>
+      <input type="submit" name="bynl" value="Natural language query" form="form" id="bynl"/>
+    </form>
+    </p>
+  </body>
+</html>
