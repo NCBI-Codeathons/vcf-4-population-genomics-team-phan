@@ -2,6 +2,10 @@
 
 List of participants and affiliations:
 - Lon Phan, NCBI (Team Leader)
+- Chelsea Alvarado, NIA Center for Alzhemier's and Related Dementias/ Data Tecnica International LLC
+- Eugene Shekhtman, NCBI
+- Hua Zhang, NCBI
+- Zhanni Lu, UMN
 - Participant, Affiliation
 
 ## Project Goals
@@ -9,15 +13,35 @@ This project aims to use the ACTIV Variant Call Format (VCF) as input to train a
 
 Goals The main objectives of this project are as follows:
 - Train a ChatGPT model to understand and generate responses specific to human genetic information.
-- Fine-tune the model using a comprehensive dataset that may include variants, genetic sequences, annotations, genes, viral data, and other metadata (geographic, patient information, etc.).
+- Fine-tune the model using a comprehensive dataset including variants, genetic sequences, annotations, genes, viral data, and other metadata (geographic, patient information, etc.).
 - Develop domain-specific prompts and guidelines to ensure accurate and relevant responses.
 - Evaluate the performance of the model through iterative training and validation processes.
 - Create a user-friendly interface to interact with the trained ChatGPT model and provide access to genetic information.
 
-## Approach
-### Data Source
-**VCF**
+## Approach (Lon)
+
+
+### Data 
+**VCF** (Lon)
+**External data - Gene, Pubmed, etc.** (Polycarp or Chey)
+
+### Backend Database  (Ricardo)
+
+
+### Jupyter Notebook (Zhanni, Ricardo)
+A sample notebook for data analysts and bioinformatic scientists to test code snippets, visualize data, and immediately see the results
+
+### GDV data tracks (Zhanni)
+
+
+### GPT model (Hua, Chey, and Gene)
+Evaluate and demonstrate using langchain with Open Source Llama model(s), so that users do not need to use paid GPT models.  Sample code is in langchain directory.  Instructions on quantizing models is under the doc directory
+
+
+### VarAI app (Chelsea)
+A web application for general users to query the data using NLP.
 
 ## Results
+
 
 ## Future Work

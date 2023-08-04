@@ -1,0 +1,30 @@
+## test table schema 
+CREATE TABLE SnpInfo (
+    run VARCHAR(255),
+    CHR VARCHAR(255),
+    POS INT,
+    REF VARCHAR(255),
+    ALT VARCHAR(255),
+    DP INT,
+    G_AD_2 INT,
+    EFFECT VARCHAR(255),
+    FUNCLASS VARCHAR(255),
+    CODON VARCHAR(255),
+    variation FLOAT,
+    AA_LEN VARCHAR(255),
+    protein_name VARCHAR(255),
+    ref_aa VARCHAR(255),
+    alt_aa VARCHAR(255),
+    protein_position VARCHAR(255),
+    ver VARCHAR(255),
+    updated TIMESTAMP
+);
+
+##In order for GPT to understand that row=variant=SNP, a context prompt with language like "each row in the table SnpInfo represent a record for an SNP or variant" may need to be provided beforehand. Alternatively, the queries may need to be adjusted.
+
+## sample test NLP queries for equivalent SQL response based on the table SNPinfo table schema above.
+variant at position 27513
+variant from position 9400 to 9500
+missense variants on gene ORF3
+total count of gene ORF3 variants
+count of variants by FUNCLASS on gene ORF3

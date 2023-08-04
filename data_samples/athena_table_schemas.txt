@@ -1,0 +1,60 @@
+CREATE TABLE annotated_variations (
+    run VARCHAR(255), -- SRA accession, run accession
+    chr VARCHAR(50),  -- chromosome
+    pos BIGINT,       -- DNA or RNA base position
+    ref VARCHAR(255), -- reference allele
+    alt VARCHAR(255), -- alternate or variant allele
+    dp BIGINT,
+    g_ad_2 BIGINT,
+    effect VARCHAR(255), -- effect values are CODON_CHANGE_PLUS_CODON_DELETION, CODON_CHANGE_PLUS_CODON_INSERTION, CODON_DELETION, CODON_INSERTION, FRAME_SHIFT, FRAME_SHIFT+START_LOST, INTERGENIC, NON_SYNONYMOUS_CODING, STOP_GAINED, SYNONYMOUS_CODING
+    funclass VARCHAR(255), -- function class(funclass) or consequence values are MISSENSE, NONE, NONSENSE, SILENT 
+    codon VARCHAR(255), -- codon encoding amino acid https://en.wikipedia.org/wiki/DNA_and_RNA_codon_tables
+    variation VARCHAR(255), -- variation allele
+    aa_len BIGINT,  -- variation amino acid length
+    protein_name VARCHAR(255), -- protein_name's aliases are "gene" and "gene name".  For demo until gene info is loaded.
+    ref_aa VARCHAR(255), -- reference amino acid, wild-type amino acid
+    alt_aa VARCHAR(255), -- alternate or variant amino acid
+    protein_position BIGINT, -- protein position of ref_aa and alt_aa
+    ver VARCHAR(50),
+    updated TIMESTAMP
+);
+
+CREATE TABLE metadata (
+    acc VARCHAR(255),  --SRA accession, run accession
+    assay_type VARCHAR(255),
+    center_name VARCHAR(255),
+    consent VARCHAR(255),
+    experiment VARCHAR(255),
+    sample_name VARCHAR(255),
+    instrument VARCHAR(255),
+    librarylayout VARCHAR(255),
+    libraryselection VARCHAR(255),
+    librarysource VARCHAR(255),
+    platform VARCHAR(255),
+    sample_acc VARCHAR(255),
+    biosample VARCHAR(255),
+    organism VARCHAR(255),
+    sra_study VARCHAR(255),
+    releasedate DATE,
+    bioproject VARCHAR(255),
+    mbytes INT,
+    loaddate TIMESTAMP,
+    avgspotlen INT,
+    mbases INT,
+    insertsize INT,
+    library_name VARCHAR(255),
+    biosamplemodel_sam ARRAY<STRING>,
+    collection_date_sam ARRAY<STRING>,
+    geo_loc_name_country_calc VARCHAR(255),
+    geo_loc_name_country_continent_calc VARCHAR(255),
+    geo_loc_name_sam ARRAY<STRING>,
+    ena_first_public_run ARRAY<STRING>,
+    ena_last_update_run ARRAY<STRING>,
+    sample_name_sam ARRAY<STRING>,
+    datastore_filetype ARRAY<STRING>,
+    datastore_provider ARRAY<STRING>,
+    datastore_region ARRAY<STRING>,
+    attributes ARRAY<STRUCT<lcstring STRING>>,
+    jattr VARCHAR(255),
+    run_file_version INT
+);
