@@ -99,7 +99,7 @@ def results_to_dataframe(results):
     columns = [col['Label'] for col in results['ResultSet']['ResultSetMetadata']['ColumnInfo']]
     rows = []
     for row in results['ResultSet']['Rows'][1:]:
-        rows.append([field['VarCharValue'] for field in row['Data']])
+        rows.append([field['VarCharValue'] for field in row['Data'] if len(field) != 0])
     df = pd.DataFrame(rows, columns=columns)
     return df
 
