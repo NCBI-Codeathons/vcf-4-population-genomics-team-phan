@@ -1,5 +1,10 @@
-EC2 t2.xlarge, 1T
+# Evaluate and demonstrate using `langchain` with Open Source Llama model(s)
 
+```none
+EC2 t2.xlarge, 1T
+```
+
+```bash
 sudo yum install emacs
 sudo yum install git -y
 sudo yum install virtualenv
@@ -41,3 +46,4 @@ from llama_cpp import Llama
 llm = Llama(model_path="./models/7B/ggml-model.bin")
 output = llm("Q: Name the planets in the solar system? A: ", max_tokens=128, stop=["Q:", "\n"], echo=True)
 print(output)
+```

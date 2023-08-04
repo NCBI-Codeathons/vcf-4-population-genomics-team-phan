@@ -71,7 +71,10 @@ TBW
 
 ### GPT model (Hua, Chey, and Gene)
 
-Evaluate and demonstrate using `langchain` with Open Source Llama model(s), so that users do not need to use paid GPT models. Sample code is in `langchain` directory. Instructions on quantizing models is under the [`doc`](./doc) directory.
+Evaluate and demonstrate using `langchain` with Open Source Llama model(s), so
+that users do not need to use paid GPT models. Sample code is in `langchain`
+directory. Instructions on quantizing models are provided in
+[`doc/llama_ec2_provision.md`](./doc/llama_ec2_provision.md).
 
 ## Results
 
