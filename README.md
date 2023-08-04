@@ -23,6 +23,8 @@ Goals The main objectives of this project are as follows:
 
 ## Approach (Lon)
 
+![VarAI diagram](images/root/varai_diagram.png "VarAI diagram")
+
 ### Data
 
 **VCF** (Lon)
