@@ -28,6 +28,12 @@ Goals The main objectives of this project are as follows:
 **VCF** (Lon)
 **External data - Gene, Pubmed, etc.** (Polycarp or Chey)
 
+### VarAI app (Chelsea)
+
+A web application for general users to query the data using NLP.
+
+![streamlit page](images/streamlit/streamlit_demo_vcf.png "Streamlit Demo page")
+
 ### Jupyter Notebook (Zhanni, Ricardo)
 
 `Notebooks/test-model.ipynb` is a sample notebook for data analysts and Bioinformatics scientists to test code snippets, visualize data, and immediately see the results.
@@ -59,12 +65,10 @@ Converting NL to SQL is simulated.
 
 Evaluate and demonstrate using `langchain` with Open Source Llama model(s), so that users do not need to use paid GPT models. Sample code is in `langchain` directory. Instructions on quantizing models is under the doc directory
 
-### VarAI app (Chelsea)
-
-A web application for general users to query the data using NLP.
-
-![streamlit page](images/streamlit/streamlit_demo_vcf.png "Streamlit Demo page")
-
 ## Results
 
+TBW
+
 ## Future Work
+
+TBW
