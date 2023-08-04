@@ -47,19 +47,21 @@ AWS_SECRET_KEY = secret["AWS_SECRET_KEY"]
 callback_manager = CallbackManager([StreamingStdOutCallbackHandler()])
 model_path_llama_7b = "/home/ec2-user/llama.cpp/models/7B/ggml-model-q4_0.bin"
 model_path_llama2_7b = "/home/ec2-user/llama.cpp/models/llama-2-7b/ggml-model-q4_0.bin"
-llm=LlamaCpp(model_path=model_path_llama2_7b,
-             n_ctx=4096,
-             callback_manager=callback_manager, verbose=True)
+llm = LlamaCpp(model_path=model_path_llama2_7b,
+               n_ctx=4096,
+               callback_manager=callback_manager, verbose=True)
 
 schema_name = 'default'
 s3_staging_dir = 's3://teamphan-athena-results/output'
-conn_str="awsathena+rest://" + AWS_ACCESS_KEY + ':' + AWS_SECRET_KEY \
+conn_str = "awsathena+rest://" + AWS_ACCESS_KEY + ':' + AWS_SECRET_KEY \
     + "@athena.us-east-1.amazonaws.com:443" \
     "/" + schema_name + "?s3_staging_dir=" + s3_staging_dir
 engine = create_engine(conn_str)
 db = SQLDatabase(engine)
-db = SQLDatabase.from_uri("sqlite:///../../chinook-database/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite")
-db_chain = SQLDatabaseChain.from_llm(llm, db, verbose=True, use_query_checker=True)
+db = SQLDatabase.from_uri(
+    "sqlite:///../../chinook-database/ChinookDatabase/DataSources/Chinook_Sqlite.sqlite")
+db_chain = SQLDatabaseChain.from_llm(
+    llm, db, verbose=True, use_query_checker=True)
 db_chain.run("How many albums are there?")
 # toolkit=SQLDatabaseToolkit(db=db, llm=llm)
 # agent_executor=create_sql_agent(
