@@ -1,4 +1,6 @@
-service: var-ai-api-4
+# increase the number at the end of the service name for failed deployments that
+# cannot be unrolled
+service: var-ai-api-2
 provider:
   name: aws
   runtime: python3.9
@@ -7,12 +9,11 @@ provider:
   # Configure the S3 bucket used by Serverless Framework to deploy code packages to Lambda
   deploymentBucket:
     # Name of an existing bucket to use (default: created by serverless)
-    # name: com.serverless.${self:provider.region}.deploys
-    name: teamphan-varai-deployment
+    # name: teamphan-varai-deployment
     # On deployment, serverless prunes artifacts older than this limit (default: 5)
-    maxPreviousDeploymentArtifacts: 20
-    # Prevents public access via ACLs or bucket policies (default: false)
-    # Note: the deployment bucket is not public by default. These are additional ACLs.
+    maxPreviousDeploymentArtifacts: 50
+    # Right now, serverless does not work without making the bucket public
+    # Needs extra permissions
     blockPublicAccess: false
     # Skip the creation of a default bucket policy when the deployment bucket is created (default: false)
     skipPolicySetup: true
@@ -36,9 +37,11 @@ custom:
   wsgi:
     app: app.app
   pythonRequirements:
-    # non-linux
+    # Docker is no available at the moment
+    #dockerizePip: non-linux
     dockerizePip: false
 
+# it seems these are ignored?
 deploymentBucket:
   name: teamphanvaraideployment
   serverSideEncryption: SSE-S3

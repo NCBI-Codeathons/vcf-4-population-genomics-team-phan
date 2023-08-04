@@ -1,0 +1,27 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "Stmt1482712489000",
+            "Effect": "Allow",
+            "Action": [
+                "iam:CreateRole",
+                "iam:PutRolePolicy",
+                "lambda:CreateFunction",
+                "lambda:InvokeAsync",
+                "lambda:InvokeFunction",
+                "iam:PassRole",
+                "lambda:UpdateAlias",
+                "lambda:CreateAlias",
+                "lambda:GetFunctionConfiguration",
+                "lambda:AddPermission",
+                "lambda:UpdateFunctionCode",
+                "s3:GetBucketPolicy",
+                "s3:PutBucketPolicy"
+            ],
+            "Resource": [
+                "*"
+            ]
+        }
+    ]
+}
