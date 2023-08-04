@@ -36,9 +36,11 @@ A web application for general users to query the data using NLP.
 
 ### Jupyter Notebook (Zhanni, Ricardo)
 
-`Notebooks/test-model.ipynb` is a sample notebook for data analysts and Bioinformatics scientists to test code snippets, visualize data, and immediately see the results.
+[`Notebooks/test-model.ipynb`](./Notebooks/test-model.ipynb) is a sample
+notebook for data analysts and Bioinformatics scientists to test code snippets,
+visualize data, and immediately see the results.
 
-![nb_results](images/notebooks/nb_results.png "Notebook executing natural language queries")
+![Notebook with results](images/notebooks/nb_results.png "Notebook executing natural language queries")
 
 **Note** At the moment, only these two queries are understood:
 
@@ -49,21 +51,24 @@ The conversion from natural language (NL) to SQL is simulated.
 
 ### Backend (Ricardo)
 
-A basic Flask app is in the `api` directory. It queries an Athena backend. Only
-the first 1000 results are retrieved.
+A basic Flask app is in the [`api`](./api) directory. It queries an Athena
+backend that has the contents of the VCF files in this Codeathon. Only the first
+1000 results are retrieved, currently.
 
-![test page](images/api/test_page.png "Test page")
+![API test page](images/api/test_page.png "Test page")
 
-![results page](images/api/results_page.png "Results page")
+![API results page](images/api/results_page.png "Results page")
 
 **Note** Only the two queries supported by the notebook are understood here.
-Converting NL to SQL is simulated.
+Converting NL to SQL is also simulated.
 
 ### GDV data tracks (Zhanni)
 
+TBW
+
 ### GPT model (Hua, Chey, and Gene)
 
-Evaluate and demonstrate using `langchain` with Open Source Llama model(s), so that users do not need to use paid GPT models. Sample code is in `langchain` directory. Instructions on quantizing models is under the doc directory
+Evaluate and demonstrate using `langchain` with Open Source Llama model(s), so that users do not need to use paid GPT models. Sample code is in `langchain` directory. Instructions on quantizing models is under the [`doc`](./doc) directory.
 
 ## Results
 
